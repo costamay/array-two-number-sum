@@ -1,12 +1,25 @@
-def sol(A, T):
+# def sol(A, T):
     
-    new_list = []
-    for i in A:
-        num = str(i)
-        total = int(num[0]) + int(num[1])
+#     new_list = []
+#     for i in A:
+#         num = str(i)
+#         total = int(num[0]) + int(num[1])
         
-        if total == T:
-            new_list.append(i)
+#         if total == T:
+#             new_list.append(i)
+#     return new_list
+
+# print(sol([3,5,-4,8,11,1,-1,6], 10))
+
+def twoNumberSum(array, targetSum)::
+    seen = {}
+    new_list = []
+    for i in range(0, len(array)):
+        for j in range(i+1, len(array)):
+            if array[i] + array[j] == targetSum:
+                new_list.append(array[i])
+                new_list.append(array[j])
+
     return new_list
 
-print(sol([64, 23,24, 25, 55], 10))
+print(twoNumberSum([3,5,-4,8,11,1,-1,6], 10))
